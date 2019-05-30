@@ -5,17 +5,21 @@
 // ローカルにダウンロード
 $ git clone git@github.com:nari19/bunsan.git
 
+// プロジェクトに移動
+$ cd bunsan/
+
 // RPC ファイル自動生成 (例: add)
-$ cd ./add
+$ cd add/
 $ rpcgen add.x
-$ cc add_client.c add_clnt.c -o AddMain -lnsl
-$ cc add_server.c add_svc.c -o AddServer -lnsl
+$ cc add_client.c add_clnt.c -o -lnsl
+$ cc add_server.c add_svc.c -o -lnsl
 
 // サーバーの起動
-$ ./add_server.c <ip address> (ifconfigで調べる)
+$ ./add_server.c
 
 // プログラムの実行(別タブでターミナルを開く)
-$ ./add_client.c remote 
+$ ./add_client.c 172.16.164.34 2 5
+// => 7
  
 ```
 
@@ -26,4 +30,4 @@ macで実行する場合にかぎり、以下のエラーがでる.
 
  `error: linker command failed with exit code 1`
 
- デバックは見る限り、めんどくさそうなので、Redhudでの実行がいいかも
+ デバックは見る限り、めんどくさそうなので、redhadでの実行がいいかも
