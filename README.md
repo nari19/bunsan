@@ -8,17 +8,20 @@ $ git clone https://github.com/nari19/bunsan.git
 // プロジェクトに移動
 $ cd bunsan/
 
-// RPC ファイル自動生成 (例: add)
-$ cd add/
-$ rpcgen add.x
-$ cc add_client.c add_clnt.c -o -lnsl
-$ cc add_server.c add_svc.c -o -lnsl
+// RPC ファイル自動生成 (例: calc)
+$ cd calc/
+$ rpcgen calc.x
+$ cc calc_client.c calc_clnt.c -o calc_client -lnsl
+$ cc calc_server.c calc_svc.c -o calc_server -lnsl
 
 // サーバーの起動
-$ ./add_server.c
+$ ./calc_server
 
 // プログラムの実行(別タブでターミナルを開く)
-$ ./add_client.c 172.16.164.34 2 5
+$ ./calc_client 172.16.164.39 6 2
+// => 7
+// => 3
+// => 10
 // => 7
  
 ```
