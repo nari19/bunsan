@@ -1,5 +1,5 @@
 
-command
+## command
 
 ```
 // ローカルにダウンロード
@@ -17,5 +17,13 @@ $ ./add_server.c <ip address> (ifconfigで調べる)
 // プログラムの実行(別タブでターミナルを開く)
 $ ./add_client.c remote 
  
-
 ```
+
+## note
+
+macで実行する場合にかぎり、以下のエラーがでる.
+[参考](https://qiita.com/aframeworks-blog/items/db45373e1ccb3c32fae3)
+
+ `error: linker command failed with exit code 1`
+
+ デバックは見る限り、めんどくさそうなので、Redhudでの実行がいいかも
