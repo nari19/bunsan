@@ -3,7 +3,7 @@
 
 ```
 // ローカルにダウンロード
-$ git clone git@github.com:nari19/bunsan.git
+$ git clone https://github.com/nari19/bunsan.git
 
 // プロジェクトに移動
 $ cd bunsan/
